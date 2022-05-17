@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Insurance and Banking Applications</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'logo.jpg' %}" rel="icon" media="all">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"  rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- Bootstrap -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+
+	<!-- Custom stlylesheet -->
+	<link  rel="stylesheet" href="{% static 'css/style11.css' %}" >
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.5.0
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+      body{
+          background-color: hsl(200, 48%, 23%);
+      }
+      .abc{
+          padding-top: 4%;
+          font-size: 70px;
+          text-align: center;
+          color: aliceblue;
+          
+      }
+      .spacing{
+        margin-top: 10px;
+      }
+      @media screen and (max-width :  800px) {
+        .spacing{
+        margin-top: 500px;
+      }
+      }
+  </style>
+  <script type="text/javascript" language="javascript">    
+    function CompareDate() {    
+        console.log("777777777777777777")
+        var start = document.getElementById("Opened").value;    
+        var end = document.getElementById("Close").value; 
+        
+        if (start >= end) {    
+             alert("Opening date must be earlier to closing date");   
+             document.getElementById("Close").value = ""; 
+         } 
+     }        
+</script>
+</head>
+
+<body>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>ValueMomentum</span></a></h1> -->
+        <img src="{% static 'ValueMomentum-logo.png' %}" height="500" width="100" href="index.html">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a  href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          
+          
+          
+          <li class="dropdown" class="active "><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              
+              <li class="dropdown"><a href="#"><span>Insurance</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'Medical-Insurance-Premium' %}">Medical Insurance Premium Prediction</a></li>
+                  <li><a href="{% url 'Insurance-company-complaints-index' %}">Insurance Company Complaints</a></li>
+                  <li><a href="{% url 'Customer-life-time-value-index' %}">Customer Life Time Value Prediction</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Banking</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'Credit-card-fraud-index' %}">Credit Card Fraud Detection</a></li>
+                  <li><a href="{% url 'Credit-card-approval-index' %}">Credit Card Approval Prediction</a></li>
+                  <li><a href="{% url 'Home-loan-prediction-index' %}">Home Loan Prediction</a></li>
+                  <li><a href="{% url 'Bank-Customer-Churn-Prediction-index' %}">Bank Customer Churn Prediction</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+          <li><a href="{% url 'team' %}">Team</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= 
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      
+      <div class="carousel-item active">
+        <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown"><span>Medical Insurance Premium Prediction</span></h2>
+        </div>
+        
+
+      </div>
+
+    </div>
+  </section> End Hero -->       
+  <main id="main">
+  <h2 class="abc"><span><b>Insurance Company Complaints</b></span></h2>
+  <div class="spacing"></div>
+    
+    <div id="booking" class="section">
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
+          <div class="booking-form">
+            <form method="post" action="{% url 'Insurance-company-complaints-result' %}">
+            {% csrf_token %}  
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Name of the Company : </span>
+                    <input required class="form-control"  name="Company" required type="text" placeholder="Company's Name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Coverage : </span>
+                    <select required class="form-control" name="Coverage">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Tenant Homeowners</option>
+                      <option value="2">Auto</option>
+                      <option value="3">nan</option>
+                      <option value="4">Homeowners</option>
+                      <option value="5">General Liability</option>
+                      <option value="6">Individual Health</option>
+                      <option value="7">Commercial Fire</option>
+                      <option value="8">Group Health</option>
+                      <option value="9">Individual Long Term Care</option>
+                      <option value="10">Group/Association Trust</option>
+                      <option value="11">Auto Uninsured Motorist</option>
+                      <option value="12">Other [Enter Coverage]</option>
+                      <option value="13">Dental/Group Assoc Trust</option>
+                      <option value="14">Auto Physical Damage</option>
+                      <option value="15">Individual Life</option>
+                      <option value="16">Auto Liability</option>
+                      <option value="17">Credit A & H</option>
+                      <option value="18">A & H</option>
+                      <option value="19">Condo Unit Owner</option>
+                      <option value="20">Individual Annuity</option>
+                      <option value="21">Group Life</option>
+                      <option value="22">Exchange-Individual Hlth</option>
+                      <option value="23">Worker's Compensation</option>
+                      <option value="24">Group Long Term Care</option>
+                      <option value="25">Commercial Auto</option>
+                      <option value="26">Group Disability Income</option>
+                      <option value="27">Dental</option>
+                      <option value="28">Commercial Multi-Peril</option>
+                      <option value="29">Extended Warranty(Other)</option>
+                      <option value="30">Travel Insurance</option>
+                      <option value="31">Watercraft</option>
+                      <option value="32">Group Med Supplemental</option>
+                      <option value="33">Ind Medicare Supplemental</option>
+                      <option value="34">Medicare Advantage</option>
+                      <option value="35">Exchange-Dental</option>
+                      <option value="36">Dwelling Fire</option>
+                      <option value="37">Condo Association</option>
+                      <option value="38">Title Insurance</option>
+                      <option value="39">Inland Marine</option>
+                      <option value="40">Personal Umbrella</option>
+                      <option value="41">Auto Medical Payment</option>
+                      <option value="42">Mobile Home</option>
+                      <option value="43">Farmowners</option>
+                      <option value="44">Portable Electronics Ins</option>
+                      <option value="45">Unknown</option>
+                      <option value="46">Ind Disability Income</option>
+                      <option value="47">Home Warranty</option>
+                      <option value="48">Group Annuity</option>
+                      <option value="49">Auto Warranty</option>
+                      <option value="50">Limited Benefit Health</option>
+                      <option value="51">Aviation</option>
+                      <option value="52">Spec Disease-Individual</option>
+                      <option value="53">Motorcycle</option>
+                      <option value="54">Exchange-Group Health</option>
+                      <option value="55">Ocean Marine</option>
+                      <option value="56">Fire, Allied</option>
+                      <option value="57">Professional Liability</option>
+                      <option value="58">Medicare</option>
+                      <option value="59">Life and Annuity</option>
+                      <option value="60">Prescription</option>
+                      <option value="61">Fidelity and Surety</option>
+                      <option value="62">Federal Flood</option>
+                      <option value="63">Vision</option>
+                      <option value="64">Medicare Part D Rx</option>
+                      <option value="65">Short Term Medical</option>
+                      <option value="66">Specified Disease - Group</option>
+                      <option value="67">Credit/Property</option>
+                      <option value="68">Credit Life</option>
+                      <option value="69">Commercial Umbrella</option>
+                      <option value="70">Medical Malpractice</option>
+                      <option value="71">Comprehensive Person Liab</option>
+                      <option value="72">Medical Discount Plans</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Sub Reason : </span>
+                    <select required class="form-control" name="SubReason">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Denial of Claim</option>
+                      <option value="2">Premium/Notice</option>
+                      <option value="3">Claim Procedure</option>
+                      <option value="4">Unsatisfactory Settlement</option>
+                      <option value="5">Non-Renewal</option>
+                      <option value="6">Claim Delays</option>
+                      <option value="7">Coordination of Benefit</option>
+                      <option value="8">Policy Service</option>
+                      <option value="9">Cancellation</option>
+                      <option value="10">Surprise Billing</option>
+                      <option value="11">Refusal to Insure</option>
+                      <option value="12">Premium/Rate Increase</option>
+                      <option value="13">Unsatisfactory Offer</option>
+                      <option value="14">Actual Cash Value Dispute</option>
+                      <option value="15">Provider Contract Issue</option>
+                      <option value="16">Policy Service Delay</option>
+                      <option value="17">Eligibility of Provider</option>
+                      <option value="18">Excessive Charges</option>
+                      <option value="19">Producer Handling</option>
+                      <option value="20">Premium Refund Delay</option>
+                      <option value="21">Contract Provision</option>
+                      <option value="22">Loss of Use</option>
+                      <option value="23">Misleading Advertising</option>
+                      <option value="24">Service Fees</option>
+                      <option value="25">Misrepresentation</option>
+                      <option value="26">Medical Necessity</option>
+                      <option value="27">Subrogation</option>
+                      <option value="28">Failed to Remit Premium</option>
+                      <option value="29">Other [Enter Sub-Reason]</option>
+                      <option value="30">No Subreason</option>
+                      <option value="31">Comparative Negligence</option>
+                      <option value="32">No Coverage/Premium Paid</option>
+                      <option value="33">Other state DOI</option>
+                      <option value="34">UR Procedure</option>
+                      <option value="35">Diminished Value</option>
+                      <option value="36">CPT Code Issue</option>
+                      <option value="37">Discontinuation & Replmnt</option>
+                      <option value="38">Time Delay</option>
+                      <option value="39">Usual and Customary Fees</option>
+                      <option value="40">Audit</option>
+                      <option value="41">Policy Issue Delay</option>
+                      <option value="42">After Mrkt Prts/Unsat Set</option>
+                      <option value="43">Steering</option>
+                      <option value="44">Other Fees</option>
+                      <option value="45">Underwriting Delays</option>
+                      <option value="46">Pre-Existing Condition</option>
+                      <option value="47">Labor Rate</option>
+                      <option value="48">Storage Fees</option>
+                      <option value="49">No Response</option>
+                      <option value="50">Network Adequacy</option>
+                      <option value="51">Duplicate Coverage</option>
+                      <option value="52">Mandated Benefit</option>
+                      <option value="53">Mis-Quote</option>
+                      <option value="54">Case Management</option>
+                      <option value="55">Unprofessional Conduct</option>
+                      <option value="56">In-network Exception</option>
+                      <option value="57">CT Continuation 38a-512a</option>
+                      <option value="58">Carrier Never Rec'd Claim</option>
+                      <option value="59">Underwrtng/Waivers/Rated</option>
+                      <option value="60">Benefit Extension</option>
+                      <option value="61">Rescission</option>
+                      <option value="62">Classification</option>
+                      <option value="63">Unapproved Form</option>
+                      <option value="64">Unfair Discrimination</option>
+                      <option value="65">Replacement</option>
+                      <option value="66">Underwrtng/Credit History</option>
+                      <option value="67">Rebate</option>
+                      <option value="68">Carrier Never Rec'd Appl</option>
+                      <option value="69">Grace Period</option>
+                      <option value="70">Medicare HMO</option>
+                                        </select>   
+                                        <span class="select-arrow"></span> 
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Disposition : </span>
+                    <select required class="form-control" name="Disposition">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Contract Provision</option>
+                      <option value="2">Premium Refund</option>
+                      <option value="3">Refer To Appraisal</option>
+                      <option value="4">Non-Renewal Rescinded</option>
+                      <option value="5">Furnished Information</option>
+                      <option value="6">Company Position Upheld</option>
+                      <option value="7">Corrective Action</option>
+                      <option value="8">Claim Settled</option>
+                      <option value="9">Cancellation Upheld</option>
+                      <option value="10">Additional Money Received</option>
+                      <option value="11">Rate Increase Explained</option>
+                      <option value="12">nan</option>
+                      <option value="13">Refer-Judicial/Attorney</option>
+                      <option value="14">Insufficient Information</option>
+                      <option value="15">Claim Paid With Interest</option>
+                      <option value="16">Satisfactory Explanation</option>
+                      <option value="17">Complaint Withdrawn</option>
+                      <option value="18">Enter Arbitration</option>
+                      <option value="19">Non-Renewal Upheld</option>
+                      <option value="20">External Review Info Sent</option>
+                      <option value="21">Coverage Granted</option>
+                      <option value="22">Pol Restored/Reinstated</option>
+                      <option value="23">Inter-Company Arbitration</option>
+                      <option value="24">No Cause For Action</option>
+                      <option value="25">Record Only</option>
+                      <option value="26">Policy not written in CT</option>
+                      <option value="27">Satisfied</option>
+                      <option value="28">Provider Issue</option>
+                      <option value="29">Claim Reopened</option>
+                      <option value="30">Coverage Extended</option>
+                      <option value="31">Cancellation Withdrawn</option>
+                      <option value="32">Other [Enter Disposition]</option>
+                      <option value="33">Not Insurance Related</option>
+                      <option value="34">Rate Problem Solved</option>
+                      <option value="35">Policy Issued</option>
+                      <option value="36">Policy Not In Force</option>
+                      <option value="37">Underwriting Guidelines</option>
+                      <option value="38">Fees Returned</option>
+                      <option value="39">Coverage Denied</option>
+                      <option value="40">Accident in Another State</option>
+                      <option value="41">Med Jurisdiction Explained</option>
+                      <option value="42">Extl Rev Info Sent/SF</option>
+                      <option value="43">Federal</option>
+                      <option value="44">Filed Errors&Omission Clm</option>
+                      <option value="45">Underwriting Discretion</option>
+                      <option value="46">Usual & Custom Explained</option>
+                      <option value="47">Contract Violation</option>
+                      <option value="48">Deductible Recovered</option>
+                      <option value="49">Municipalities</option>
+                      <option value="50">Interest Paid</option>
+                      <option value="51">Religious Organizations</option>
+                                        </select>    
+                                        <span class="select-arrow"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Conclusion : </span>
+                    <select required class="form-control" name="Conclusion">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Unjustified</option>
+                      <option value="2">Voluntary Reconsider</option>
+                      <option value="3">Furnished Information</option>
+                      <option value="4">Questionable</option>
+                      <option value="5">Justified</option>
+                      <option value="6">nan</option>
+                      <option value="7">No Action Necessary</option>
+                      <option value="8">No Authority</option>
+                      <option value="9">Cross Reference Only</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Recovery : </span>
+                    <input required class="form-control" type="number" name="Recovery" min="0" max="1000000" placeholder="UPTO 1000000">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Date of Opening : </span>
+                    <input required class="form-control" type="date" name="Opened" id="Opened" step="1" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Date of Closing : </span>
+                    <input required class="form-control" type="date" name="Close" id="Close" onblur="CompareDate()">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-btn">
+                    <button class="submit-btn">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+  </main><!-- End #main -->
+  <div class="spacing"></div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          
+
+          
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              ValueMomentum Towers
+              Plot No 36 & 37, Gachibowli, <br>
+              Financial District, Nanakramguda,<br>
+              Hyderabad - 500032, India <br><br>
+              <strong>Phone:</strong> +91 40 67338400<br>
+              <strong>Email:</strong> @valuemomentum.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About ValueMomentum</h3>
+            <p>ValueMomentum is amongst the fastest growing insurance-focused IT services providers in North America. Leading insurers trust ValueMomentum with their core, digital and data transformation initiatives. Our IT services and software solutions help insurers deliver omni-channel digital engagement, rapidly launch & refresh products, automate operations and democratize access to data.</p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/vam_hyd?lang=en" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/ValueMomentum/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/valuemomentum_inc/?hl=en" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/valuemomentum/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>ValueMomentum</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

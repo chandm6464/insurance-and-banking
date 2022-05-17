@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Insurance and Banking Applications</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'logo.jpg' %}" rel="icon" media="all">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"  rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- Bootstrap -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+
+	<!-- Custom stlylesheet -->
+	<link  rel="stylesheet" href="{% static 'css/style11.css' %}" >
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.5.0
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+      body{
+          background-color: hsl(200, 48%, 23%);
+      }
+      .abc{
+          padding-top: 4%;
+          font-size: 70px;
+          text-align: center;
+          color: aliceblue;
+          
+      }
+      .spacing{
+        margin-top: 10px;
+      }
+      @media screen and (max-width :  800px) {
+        .spacing{
+        margin-top: 500px;
+      }
+      }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>ValueMomentum</span></a></h1> -->
+        <img src="{% static 'ValueMomentum-logo.png' %}" height="500" width="100" href="index.html">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a  href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          
+          
+          
+          <li class="dropdown" class="active "><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              
+              <li class="dropdown"><a href="#"><span>Insurance</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'Medical-Insurance-Premium' %}">Medical Insurance Premium Prediction</a></li>
+                  <li><a href="{% url 'Insurance-company-complaints-index' %}">Insurance Company Complaints</a></li>
+                  <li><a href="{% url 'Customer-life-time-value-index' %}">Customer Life Time Value Prediction</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Banking</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'Credit-card-fraud-index' %}">Credit Card Fraud Detection</a></li>
+                  <li><a href="{% url 'Credit-card-approval-index' %}">Credit Card Approval Prediction</a></li>
+                  <li><a href="{% url 'Home-loan-prediction-index' %}">Home Loan Prediction</a></li>
+                  <li><a href="{% url 'Bank-Customer-Churn-Prediction-index' %}">Bank Customer Churn Prediction</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+          <li><a href="{% url 'team' %}">Team</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= 
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      
+      <div class="carousel-item active">
+        <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown"><span>Medical Insurance Premium Prediction</span></h2>
+        </div>
+        
+
+      </div>
+
+    </div>
+  </section> End Hero -->       
+  <main id="main">
+  <h2 class="abc"><span><b>Credit Card Approval </b></span></h2>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="spacing"></div>
+    <div id="booking" class="section">
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
+          <div class="booking-form">
+            <form method="post" action="{% url 'Credit-card-approval-result' %}">
+            {% csrf_token %}  
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Name : </span>
+                    <input required class="form-control"  name="first_name" required type="text" placeholder="First Name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label"></span>
+                    <input required class="form-control" name="last_name" required type="text" placeholder="Last Name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Email : </span>
+                    <input required class="form-control" type="email" name="email" placeholder="eg: example@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Gender : </span>
+                    <select required class="form-control" name="Gender">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Date Of Birth : </span>
+                    <input required class="form-control" type="date" name="DAYS_BIRTH" max="2010-01-01">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Own Car : </span>
+                    <select required class="form-control" name="FLAG_OWN_CAR">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                      <option value="1">Yes</option>
+                                            <option value="2">No</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Own House : </span>
+                    <select required class="form-control" name="FLAG_OWN_REALTY">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Yes</option>
+                                            <option value="2">No</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Housing Type : </span>
+                    <select required class="form-control" name="NAME_HOUSING_TYPE">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Rented apartment</option>
+                                            <option value="2">House / apartment</option>
+                                            <option value="3">Municipal apartment</option>
+                                            <option value="4">With parents</option>
+                                            <option value="5">Co-op apartment</option>
+                                            <option value="6">Office apartment</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Number of People In Family : </span>
+                    <select required class="form-control" name="CNT_FAM_MEMBERS">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                    </select>
+                    <span class="select-arrow"></span>  
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Annual Income : </span>
+                    <input required class="form-control" type="number" name="AMT_INCOME_TOTAL" step="1" min="0">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Type of Income : </span>
+                    <select required class="form-control" name="NAME_INCOME_TYPE">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Working</option>
+                                            <option value="2">Commercial associate</option>
+                                            <option value="3">Pensioner</option>
+                                            <option value="4">State servant</option>
+                                            <option value="5">Student</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Academic Qualification : </span>
+                    <select required class="form-control" name="NAME_EDUCATION_TYPE">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">Higher education</option>
+                                            <option value="2">Secondary / secondary special</option>
+                                            <option value="3">Incomplete higher</option>
+                                            <option value="4">Lower secondary</option>
+                                            <option value="5">Academic degree</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Occupation : </span>
+                    <select required class="form-control" name="OCCUPATION_TYPE">
+                      <option value="" disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="1">None</option>
+                                            <option value="2">Security staff</option>
+                                            <option value="3">Sales staff</option>
+                                            <option value="4">Accountants</option>
+                                            <option value="5">Laborers</option>
+                                            <option value="6">Managers</option>
+                                            <option value="7">Drivers</option>
+                                            <option value="8">Core staff</option>
+                                            <option value="9">High skill tech staff</option>
+                                            <option value="10">Cleaning staff</option>
+                                            <option value="11">Private service staff</option>
+                                            <option value="12">Cooking staff</option>
+                                            <option value="13">Low-skill Laborers</option>
+                                            <option value="14">Medicine staff</option>
+                                            <option value="15">Secretaries</option>
+                                            <option value="16">Waiters/barmen staff</option>
+                                            <option value="17">HR staff</option>
+                                            <option value="18">Realty agents</option>
+                                            <option value="19">IT staff</option>
+                                        </select>
+                                        <span class="select-arrow"></span>    
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Start Date of Employement : </span>
+                    <input required class="form-control" type="date" name="DAYS_EMPLOYED" step="1" max="2021-09-22">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Date of Applying For Credit Card : </span>
+                    <input required class="form-control" type="date" name="MONTHS_BALANCE" max="2021-09-30">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-btn">
+                    <button class="submit-btn">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+      
+      
+
+  </main><!-- End #main -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="spacing"></div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          
+
+          
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              ValueMomentum Towers
+              Plot No 36 & 37, Gachibowli, <br>
+              Financial District, Nanakramguda,<br>
+              Hyderabad - 500032, India <br><br>
+              <strong>Phone:</strong> +91 40 67338400<br>
+              <strong>Email:</strong> @valuemomentum.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About ValueMomentum</h3>
+            <p>ValueMomentum is amongst the fastest growing insurance-focused IT services providers in North America. Leading insurers trust ValueMomentum with their core, digital and data transformation initiatives. Our IT services and software solutions help insurers deliver omni-channel digital engagement, rapidly launch & refresh products, automate operations and democratize access to data.</p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/vam_hyd?lang=en" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/ValueMomentum/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/valuemomentum_inc/?hl=en" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/valuemomentum/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>ValueMomentum</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+django==3.2.6
+numpy
+joblib
+sklearn
+whitenoise
+pandas
+matplotlib
+seaborn
+imblearn
+scipy
+xgboost
+dexplot
+datasist
+xlrd
+autoviz
+plotly

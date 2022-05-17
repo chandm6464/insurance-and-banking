@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Insurance and Banking Applications</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'logo.jpg' %}" rel="icon" media="all">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"  rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- Bootstrap -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+
+	<!-- Custom stlylesheet -->
+	<link  rel="stylesheet" href="{% static 'css/style11.css' %}" >
+
+  <!-- =======================================================
+  * Template Name: Moderna - v4.5.0
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+      body{
+          background-color: hsl(200, 48%, 23%);
+      }
+      .abc{
+          padding-top: 4%;
+          font-size: 80px;
+          text-align: center;
+          color: aliceblue;
+          padding-bottom: 0%;
+      }
+      .spacing{
+        margin-top: 10px;
+      }
+      @media screen and (max-width :  800px) {
+        .spacing{
+        margin-top: 500px;
+      }
+      }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>ValueMomentum</span></a></h1> -->
+        <img src="{% static 'ValueMomentum-logo.png' %}" height="500" width="100" href="index.html">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active " href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          
+          
+          
+          <li class="dropdown" class="active "><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              
+              <li class="dropdown"><a href="#"><span>Insurance</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'Medical-Insurance-Premium' %}">Medical Insurance Premium Prediction</a></li>
+                  <li><a href="{% url 'Insurance-company-complaints-index' %}">Insurance Company Complaints</a></li>
+                  <li><a href="{% url 'Customer-life-time-value-index' %}">Customer Life Time Value Prediction</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Banking</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{% url 'Credit-card-fraud-index' %}">Credit Card Fraud Detection</a></li>
+                  <li><a href="{% url 'Credit-card-approval-index' %}">Credit Card Approval Prediction</a></li>
+                  <li><a href="{% url 'Home-loan-prediction-index' %}">Home Loan Prediction</a></li>
+                  <li><a href="{% url 'Bank-Customer-Churn-Prediction-index' %}">Bank Customer Churn Prediction</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+          <li><a href="{% url 'team' %}">Team</a></li>
+          
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= 
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      
+      <div class="carousel-item active">
+        <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown"><span>Medical Insurance Premium Prediction</span></h2>
+        </div>
+        
+
+      </div>
+
+    </div>
+  </section> End Hero -->       
+  <main id="main">
+  <h2 class="abc"><span><b>Bank Customer Churn Prediction</b></span></h2>
+  <div class="spacing"></div>
+    
+    <div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<form method="POST" action="{% url 'Bank-Customer-Churn-Prediction-result' %}">
+                        {% csrf_token %}
+							
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Name</span>
+										<input class="form-control"  name= "first_name" required type="text" placeholder="First Name">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label"></span>
+										<input class="form-control" name="last_name" required type="text" placeholder="Last Name">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Age</span>
+										 <input name="Age" class="form-control" required type="number"  step="1" min="1" max="100" >
+										</div>
+									</div>
+									<div class="col-md-3">
+									<div class="form-group" >
+										<span class="form-label">Gender</span>
+										<select class="form-control" name="Gender" required >
+
+											<option disabled="disabled" selected="selected" placeholder="Choose Gender" value="">Choose Gender</option>
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+											
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Country</span>
+										<select class="form-control" name="Country" required>
+											
+                                            <option disabled="disabled" selected="selected">Choose Country</option>
+                                            <option value="France">France</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="Spain">Spain</option>
+											
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Credit Score</span>
+										 <input class="form-control" required type="number" name="CreditScore" min="350" max="850" placeholder="350-850" >
+										</div>
+									</div>
+							</div>
+							<div class="row">
+								
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Tenure</span>
+										 <input class="form-control" required type="number" name="Tenure" min="0" max="10"  placeholder="0-10">
+										</div>
+									</div>
+									<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Do you have credit card</span>
+										<select class="form-control" name="HasCrCard" required>
+											 <option disabled="disabled"  selected="selected"  value="">Choose an option</option>
+
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>	
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Are you an active customer?</span>
+										<select class="form-control" name="IsActiveMember" required>
+											 <option disabled="disabled"  selected="selected"  value="">Choose an option</option>
+
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Balance</span>
+										 <input class="form-control" required type="number" name="Balance"  min="0"  placeholder="Balance">
+										</div>
+									</div>
+							</div>
+
+
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Number Of Products</span>
+										 <input class="form-control" required type="number"  name="NumOfProducts" min="1" max="4" placeholder="Max 4">
+										</div>
+									</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Estimated Salary</span>
+										 <input class="form-control" required type="number"  name="EstimatedSalary" min="12"  >
+										</div>
+									</div>	
+
+							</div>		
+
+							
+							
+							
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-btn">
+										<button class="submit-btn">Submit</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  </main><!-- End #main -->
+  <div class="spacing"></div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          
+
+          
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              ValueMomentum Towers
+              Plot No 36 & 37, Gachibowli, <br>
+              Financial District, Nanakramguda,<br>
+              Hyderabad - 500032, India <br><br>
+              <strong>Phone:</strong> +91 40 67338400<br>
+              <strong>Email:</strong> @valuemomentum.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About ValueMomentum</h3>
+            <p>ValueMomentum is amongst the fastest growing insurance-focused IT services providers in North America. Leading insurers trust ValueMomentum with their core, digital and data transformation initiatives. Our IT services and software solutions help insurers deliver omni-channel digital engagement, rapidly launch & refresh products, automate operations and democratize access to data.</p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/vam_hyd?lang=en" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/ValueMomentum/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/valuemomentum_inc/?hl=en" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/valuemomentum/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>ValueMomentum</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
